@@ -1,23 +1,23 @@
 # Tegak-in
 
-Aplikasi Windows untuk membantu mengingatkan postur duduk menggunakan webcam.
+A Windows desktop application that helps monitor and correct your sitting posture using a webcam.
 
-## Menjalankan aplikasi
+## Running the Application
 
-Unduh `Tegak-in.exe` dari bagian **Releases**, lalu jalankan di Windows 10/11 64-bit. Python tidak perlu dipasang di komputer pengguna. Izinkan akses kamera jika Windows memintanya.
+Download `Tegak-in.exe` from the **Releases** section and run it on Windows 10/11 (64-bit). No Python installation is required on the user's computer. Allow camera access if prompted by Windows.
 
-Jika Windows menampilkan peringatan SmartScreen untuk file yang belum dikenal, pastikan file berasal dari rilis Tegak-in yang tepercaya sebelum memilih untuk menjalankannya.
+If Windows SmartScreen displays an unrecognized file warning, ensure the binary originates from a trusted Tegak-in release before proceeding to run it.
 
-## Membuat file EXE
+## Building the EXE
 
-Build dilakukan di Windows dan memerlukan Python 3.12 64-bit serta Python Launcher (`py`).
+The build process runs on Windows and requires 64-bit Python 3.12 along with the Python Launcher (`py`).
 
-1. Buka folder proyek di Windows.
-2. Jalankan `build.bat`.
-3. Setelah selesai, file aplikasi ada di `dist\Tegak-in.exe`.
+1. Open the project folder on Windows.
+2. Run `build.bat`.
+3. Once completed, the standalone executable will be located at `dist\Tegak-in.exe`.
 
-Build pertama memerlukan koneksi internet untuk memasang dependensi. `Tegak-in.exe` adalah build satu-file dan sudah menyertakan dependensi serta model MediaPipe; komputer pengguna tidak perlu memasang Python.
+An active internet connection is required during the initial build to install dependencies. `Tegak-in.exe` is a single-file executable bundled with all necessary dependencies and MediaPipe models. End users do not need Python installed.
 
-Untuk membagikan aplikasi, unggah `dist\Tegak-in.exe` sebagai aset pada GitHub Release. Perubahan kode atau repo saja tidak otomatis menerbitkan file EXE.
+To distribute the app, upload `dist\Tegak-in.exe` as a release asset under GitHub Releases. Pushing code updates or commits to the repository will not automatically generate or publish an updated EXE.
 
-Log error aplikasi tersimpan di `%LOCALAPPDATA%\Tegak-in\error.log`.
+Application error logs are stored at `%LOCALAPPDATA%\Tegak-in\error.log`.
