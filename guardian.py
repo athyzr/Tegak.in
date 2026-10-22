@@ -1,4 +1,5 @@
 import time, ctypes
+from pathlib import Path
 import cv2, numpy as np, tkinter as tk
 import mediapipe as mp
 import pystray
@@ -10,8 +11,10 @@ try:
     _lock.bind(("127.0.0.1", 47653))
 except OSError:
     sys.exit(0)                      # sudah ada yang berjalan
-if sys.executable.lower().endswith("pythonw.exe"):
-    sys.stderr = open("error.log", "a", buffering=1)
+if sys.stderr is None or sys.executable.lower().endswith("pythonw.exe"):
+    log_dir = Path.home() / "AppData" / "Local" / "Tegak-in"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    sys.stderr = open(log_dir / "error.log", "a", buffering=1, encoding="utf-8")
 
 ctypes.windll.shcore.SetProcessDpiAwareness(1)
 

@@ -1,0 +1,7 @@
+venv/
+.build-venv/
+build/
+dist/
+Tegak-in.spec
+__pycache__/
+error.log
